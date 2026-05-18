@@ -29,7 +29,12 @@ function App() {
         <Toaster 
           position="top-right" 
           toastOptions={{ 
-            style: { background: "#1a3a1a", color: "#4ade80", fontSize: "12px", border: "1px solid #22c55e" } 
+            style: { 
+              background: "#1a3a1a", 
+              color: "#4ade80", 
+              fontSize: "12px", 
+              border: "1px solid #22c55e" 
+            } 
           }} 
         />
         <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
@@ -40,7 +45,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={isAuthenticated ? <Profile setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/login" />} />
+          <Route path="/profile" element={
+            isAuthenticated ? 
+            <Profile setIsAuthenticated={setIsAuthenticated} /> : 
+            <Navigate to="/login" />
+          } />
         </Routes>
         <Footer />
       </div>
