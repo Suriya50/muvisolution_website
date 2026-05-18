@@ -33,7 +33,7 @@ router.post("/register", async (req, res) => {
     });
 
   } catch (error) {
-    console.log("REGISTER ERROR 👉", error); // show real error
+    console.log("REGISTER ERROR ", error); // show real error
 
     res.status(500).json({
       success: false,
@@ -75,7 +75,7 @@ router.post("/login", async (req, res) => {
     });
 
   } catch (error) {
-    console.log("LOGIN ERROR 👉", error);
+    console.log("LOGIN ERROR ", error);
 
     res.status(500).json({
       success: false,
